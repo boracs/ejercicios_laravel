@@ -17,8 +17,6 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/edadform',[FormController::class,'showEdadform']);
+Route::post('/edadform',[FormController::class,'showEdadform']);
 Route::get('/nameform',[FormController::class,'showNameform'] );
-
-Route::get('/showinfo', function () {
-    return view('showinfo');
-});
+Route::post('/showinfo',[FormController::class,'showinfo'] );

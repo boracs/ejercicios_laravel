@@ -6,9 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Helow anonymous user</h1>
+
+    <h1>Hello   {{ $name }} {{ $subname }}</h1>
     <hr>
-    <form action="{{ config('app.url')}}/showinfo">
+    <form action="{{ config('app.url')}}/showinfo" method = 'post'>
+    @csrf
     <label for="Age"></label>
     <input type="text" name="age">
     <br>

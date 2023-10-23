@@ -9,9 +9,12 @@
     
 <h1>Hello rellena los campos </h1>
     <hr>
-    <form action="{{ config('app.url')}}/showinfo">
-    <label for="Age"></label>
-    <input type="text" name="age">
+    <form action="{{ config('app.url')}}/edadform" method="post">
+    @csrf
+    <label for="Age">Name</label>
+    <input type="text" name="name">
+    <label for="Name">Surbname</label>
+    <input type="text" name="subname">
     <br>
     <input type="submit">
     </form>
