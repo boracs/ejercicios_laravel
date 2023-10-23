@@ -8,14 +8,8 @@
 <body>
 
 
-<h1>VISTA_2</h1>
 
 
-@foreach( $arrayfrutas as $fruta)
-  <p>{{ $fruta }}</p>
-@endforeach
 
-
-    
 </body>
 </html>

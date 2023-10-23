@@ -10,7 +10,12 @@
 
 <h1>VISTA_1</h1>
 
+<?php
 
+$variable ="hola";
+echo $variable;
+
+?>
 
 
 

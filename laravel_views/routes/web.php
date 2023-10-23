@@ -21,8 +21,9 @@ Route::get('/vista1', function () {
     return view('view1');
 });
 
-Route::get('/vista2', function () {;
-    return view('view2', ['arrayfrutas' => ['platano','melon','manzana']]);
+Route::get('/vista2', function () {
+    $arrayfrutas = ['platano','melon','manzana'];
+    return view('view2', ['arrayfrutas' => [$arrayfrutas]]);  // porque no puedo ahcer esto???
 });
 
 Route::get('/vista3/{id}', function ($id){
@@ -42,7 +43,8 @@ Route::get('/vista4/{id}', function ($id){
         2 => 'platano',
         3 => 'pera',
     );
-    $valor = $arrayfrutas[$id] ?? 'no existe esa posicion';
 
-    return view('view4', compact('valor'));
+    $valor = $arrayfrutas[$id] ?? 'no existe esa posicion'; 
+    $id = $id;
+    return view('view4', compact('valor'), compact('id'));
 });

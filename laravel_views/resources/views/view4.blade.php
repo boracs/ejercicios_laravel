@@ -9,12 +9,11 @@
     
 
 
- @if ($valor%2==0){
-    <p style="backgroundcolor:'red'">$valor</p>}
-    @else{
-        <p>$valor</p>
-    } 
-
+    @if($id%2==0)
+    <p style="background-color:red"> {{ $valor }}</p>
+    @else
+        <p>{{ $valor }}</p>
+    @endif
 
 
 

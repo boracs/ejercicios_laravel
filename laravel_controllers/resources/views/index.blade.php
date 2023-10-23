@@ -7,15 +7,8 @@
 </head>
 <body>
 
-
-<h1>VISTA_2</h1>
-
-
-@foreach( $arrayfrutas as $fruta)
-  <p>{{ $fruta }}</p>
-@endforeach
-
-
+<button><a href="{{ config('app.url') }}/nameform">form</a></button>
+<button><a href="{{ config('app.url') }}/edadform">edad</a></button>
     
 </body>
 </html>
