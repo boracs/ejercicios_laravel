@@ -13,10 +13,8 @@ use App\Http\Controllers\FormController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/',[FormController::class,'showIndex'] );
 Route::get('/edadform',[FormController::class,'showEdadform']);
 Route::post('/edadform',[FormController::class,'showEdadform']);
 Route::get('/nameform',[FormController::class,'showNameform'] );
-Route::post('/showinfo',[FormController::class,'showinfo'] );
+Route::post('/showinfo/{name?}/{surbname?}',[FormController::class,'showinfo'] );

@@ -14,7 +14,7 @@
     <label for="Age">Name</label>
     <input type="text" name="name">
     <label for="Name">Surbname</label>
-    <input type="text" name="subname">
+    <input type="text" name="surbname">
     <br>
     <input type="submit">
     </form>

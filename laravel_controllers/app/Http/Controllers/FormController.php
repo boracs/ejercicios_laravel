@@ -8,30 +8,40 @@ class FormController extends Controller
 {
 
 
-
-    public function showEdadform(Request $request){
-        $name = $request['name'];
-        $subname = $request['subname'];
-        if($name==""){
-            $name="Anonymus name";
-        }
-        return view('edadform',['name'=>$name, 'subname'=>$subname]);
+    public function showEdadform(Request $request)
+    {
+        {
+            $name = $request['name'];
+            $surbname = $request['surbname'];
+            if($name==""){
+                $name="Anonymus name";
+            }
+            if($surbname==""){
+                $surbname="Anonymus surbane";
+            }
+            return view('edadform',['name'=>$name, 'surbname'=>$surbname]);
+        } 
     }
 
-
-
-       
-    public function showNameform(){
+    public function showNameform()
+    {
         return view('nameform');
     }
 
 
-
-
-    public function showinfo(Request  $request){
-        $edad = $request['edad'];
-
-        return view('showinfo',['edad'=>$edad]);
+    public function showinfo(Request  $request ,$name ,$surbname){
+        $edad = $request['age'];
+        $name = $name;
+        $surbname = $surbname;
+        return view('showinfo',['edad'=>$edad , 'name'=>$name ,'surbname'=>$surbname]);
     }
+
+
+    public function showIndex()
+    {
+        return view('index');
+    }
+
+
 }
 

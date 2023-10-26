@@ -7,15 +7,16 @@
 </head>
 <body>
 
-    <h1>Hello   {{ $name }} {{ $subname }}</h1>
+    <h1>Hello {{ $name }} {{ $surbname }}</h1>
     <hr>
-    <form action="{{ config('app.url')}}/showinfo" method = 'post'>
+    <form action="{{ config('app.url')}}/showinfo/{{ $name }}/{{ $surbname }}" method = 'post'>
     @csrf
-    <label for="Age"></label>
+    <label for="Age">Edad</label>
     <input type="text" name="age">
     <br>
     <input type="submit">
     </form>
+
 
 </body>
 </html>

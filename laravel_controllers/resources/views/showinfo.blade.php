@@ -6,9 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-
-
-
+    <h1>Hello {{ $name }}  {{ $surbname }}  </h1>
+    <p>Your age is : {{ $edad }} </p>
+    <button><a href="{{ config('app.url')}}/">Back</a></button>
 
 
 </body>
