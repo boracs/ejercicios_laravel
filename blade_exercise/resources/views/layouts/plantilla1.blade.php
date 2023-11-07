@@ -8,10 +8,20 @@
 </head>
 <body>
 
-@section
+@section('header')
+    @include('partials.header')
+@show
 
+@section ('nav')
+    @include('partials.nav')
+@show
+ 
+@section('seccion_principal')
+@show
 
+@section ('footer')
+    @include('partials.footer')
+@show
 
-    
 </body>
 </html>

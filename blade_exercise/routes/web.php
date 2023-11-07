@@ -19,4 +19,21 @@ Route::get('/', function () {
 
 Route::get('/inicio', function () {
     return view('inicio');
-});
+})->name('inicio');
+
+Route::get('/nosotros', function () {
+    return view('nosotros');
+})->name('nosotros');
+
+Route::get('/dashboard', function () {
+    $noticias = ['Noticia 1 ' =>'El ayuntamiento prohibe cantar',
+                 'Noticia 2' => 'El rey esta potxolo',
+                 'Noticia 3 ' => 'La nasa contrata al oso jogy '
+                ];
+    return view('dashboard', ['noticias' => $noticias]);
+})->name('dashboard');
+
+
+Route::get('/eventos', function () {
+    return view('eventos');
+})->name('eventos');
