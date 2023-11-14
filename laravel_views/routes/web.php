@@ -23,7 +23,7 @@ Route::get('/vista1', function () {
 
 Route::get('/vista2', function () {
     $arrayfrutas = ['platano','melon','manzana'];
-    return view('view2', ['arrayfrutas' => [$arrayfrutas]]);  // porque no puedo ahcer esto???
+    return view('view2', ['arrayfrutas' => $arrayfrutas]);  // porque no puedo ahcer esto???
 });
 
 Route::get('/vista3/{id}', function ($id){

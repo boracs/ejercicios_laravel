@@ -14,7 +14,6 @@ class MountainsTableSeeder extends Seeder
      */
     public function run(): void
     {
-       
         /*
         DB::table('mountains')->insert([
 
@@ -27,8 +26,5 @@ class MountainsTableSeeder extends Seeder
         ]);
     */
         Mountains::factory(7)->create();
-
-
-
     }
 }

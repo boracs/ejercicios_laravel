@@ -1,0 +1,172 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+#aux_navegador{
+    height: 50px;
+}
+
+
+
+#contenedor_titulo{
+    z-index: 1000;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.95),rgba(82, 71, 71, 0.219),rgb(9, 8, 8)),url(../imagenes/carousel-1.jpg);
+    background-size: cover;
+    height: 400px;
+}
+
+#titulo{
+    font-size: 10rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* carteles */
+
+#contenedor_carteles{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 100px;
+}
+
+.cont_cartel{
+    box-shadow: 4px 4px 4px rgb(76, 124, 76);
+    margin: 8px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 300px;
+    height:400px;
+    padding: 10px;
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont_cartel img{
+    padding:5px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  
+}
+.cont_cartel h5{
+    text-align: center;
+    text-transform:uppercase;
+    padding-top: 10px;
+ }
+.cont_cartel p{
+    font-size: 14px;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.boton_cartel{
+    margin: auto;
+}
+.cont_descripcion_cartel{
+    overflow: hidden;
+}
+
+
+/*   contenedor formulario   +      footer */ 
+
+
+#contenedor_titulo_form{
+    padding: 20px;
+    margin-top: 100px;
+   padding-bottom: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    background-image:linear-gradient(rgba(10, 9, 9, 0.861),rgba(3, 2, 2, 0.132),rgb(0, 0, 0)),url(../imagenes/carousel-1.jpg);
+    background-size: cover;
+
+}
+
+#contenedor_titulo_form h3{
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+#subcontenedor_titulo_form{
+    width: 25%;
+}
+
+#contenedor_titulo_form .form-label{
+    padding: 10px;
+    border-radius: 10%;
+}
+
+#contenedor_titulo_form .form-control {
+    color: white;
+    background-color: rgba(78, 78, 78, 0.719);
+}
+#formulario{
+    border-radius: 15px;
+    padding: 30px;
+    background-color: rgba(44, 44, 44, 0.753);
+}
+/*  footer */
+
+
+
+footer{
+    width: 100%;
+    background-color: black;
+    height: auto;
+    background: #000000;
+}
+
+.lista_footer{
+text-decoration: none;
+list-style: none;
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+.form-control {
+  color: white;
+  background: #030303;
+  border-color: #f9f6f6;
+}
+
+.form-control:focus {
+  background: #3b3b3b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
