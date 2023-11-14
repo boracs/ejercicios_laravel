@@ -14,12 +14,8 @@ use  \App\Http\Controllers\InvokableController;
 |
 */
 
-Route::get('/index', function () {
-    return view('pages.index');
-});
 
-
-Route::get('/actividades', InvokableController::class);
+Route::get('/index', InvokableController::class);
 
 
 

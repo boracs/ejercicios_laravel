@@ -9,9 +9,25 @@
 
 <h1>LISTA DE MONTES</h1>
 
-@foreach ( $mountains  as $monte)
+
+@foreach ( $mountains0 as $monte)
     <p>{{ $monte->name }}</p>
 @endforeach
     
+<br><hr><br>
+
+
+
+@foreach ( $mountains1  as $monte)
+    <p>{{ $monte->name }}</p>
+@endforeach
+    
+<br><hr><br>
+
+@foreach ( $mountains2  as $monte)
+    <p>{{ $monte->name }}</p>
+@endforeach
+
+
 </body>
 </html>

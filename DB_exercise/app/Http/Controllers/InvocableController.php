@@ -12,8 +12,26 @@ class InvocableController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $mountains = DB::table('mountains')->get();
 
-        return view('mountains',['mountains' =>$mountains]);
+
+        $mountains0 = DB::table('mountains') ->get();
+
+
+        $mountains1 = DB::table('mountains')
+        ->where('belongsToRange', true)
+        ->where ('firstClimbDate','>',"2000-01-01")
+        ->where('continent', 'Europe')
+        ->get();
+
+        $mountains2  =  DB::table('mountains')
+        ->where('height' , '>=', 1500)
+        ->orWhere(function ($query){
+            $query->where('belongsToRange', false)
+                    ->where('name','NOT  RE GEXP','[aeiou]$');
+        } )->get();
+
+
+       return view('mountains',['mountains0' =>$mountains0, 'mountains1' =>$mountains1, 'mountains2'=>$mountains2]);
+        }
     }
-}
+
