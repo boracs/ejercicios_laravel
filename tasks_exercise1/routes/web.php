@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\taskController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +14,7 @@ use \App\Http\Controllers\taskController;
 |
 */
 
-Route::get('/index', [taskController::class,'insertData'])->name('insert');
+Route::get('/index', [taskController::class,'showData'])->name('show');
 
-
+Route::post('/index', [taskController::class,'insertData'])->name('showinsert');
 
