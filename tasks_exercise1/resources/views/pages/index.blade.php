@@ -8,7 +8,7 @@
                 New task
             </div>
             <div class="mb-3 m-3">
-                <form action="{{ route('show') }} ">
+                <form action="{{ route('insert') }} " method ="POST">
                     @csrf
                     <label for="exampleFormControlInput1" class="form-label">New Task</label>
                     <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Introduce la tarea...">
@@ -20,14 +20,18 @@
             <div class="card-header">
                 New task
             </div>
-                <div class="d-flex align-items-center justify-content-around">
+                <div class="d-flex flex-column  justify-content-around">
                     @foreach ($tasks as $task)
-                         <li class=" m-3 list-group-item">{{ $task->name }}</li>
+
+                        <div class="d-flex flex-row justify-content-between  align-items-center">
+                            <li class="m-3 list-group-item">{{ $task->name }}</li>
+                            <form action=" {{ route('delete',['id' =>$task->id]) }} " method="POST">
+                                    @csrf
+                                 <button type="submite" class="btn btn-danger m-3">Danger</button> 
+                             </form>
+                        </div>
+
                     @endforeach
-                    <form action="" method="POST">
-                        @csrf
-                        <button type="submite" class="btn btn-danger m-3">Danger</button> 
-                    </form>
                 </div>
             </div>
     </main>

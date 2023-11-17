@@ -24,8 +24,10 @@ class taskController extends Controller
         return redirect()->route('show');
     }
 
-    public function delateData(){
-        return view();
+    public function deleteData($id){
+        $tarea = Task::find($id);
+        $tarea->delete();
+        return redirect()->route('show')->with('success', 'Tarea eliminada exitosamente.');;
     }
 
 
