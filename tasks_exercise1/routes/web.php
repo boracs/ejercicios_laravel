@@ -15,6 +15,12 @@ use \App\Http\Controllers\taskController;
 
 Route::get('/index', [taskController::class,'showData'])->name('show');
 
-Route::post('/index', [taskController::class,'insertData'])->name('insert');
-
 Route::post('/index/{id}', [taskController::class,'deleteData'])->name('delete');
+
+Route::post('/create', [taskController::class,'insertData'])->name('insert');
+
+Route::get('/create', [taskController::class,'insertData'])->name('insertGet');
+
+Route::get('/search', [taskController::class,'searchData'])->name('searchView');
+
+Route::post('/search', [taskController::class,'searchData2'])->name('searchData');

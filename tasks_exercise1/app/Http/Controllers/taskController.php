@@ -18,11 +18,18 @@ class taskController extends Controller
     
     
     public function insertData(Request $request){
-        $task = Task::create([
+
+        if($request['name']!=""){
+            $task = Task::create([
             'name' => $request['name'],
-        ]);
-        return redirect()->route('show');
+            ]);
+            return view('pages.create');
+        }else{
+            $vacio="formulario_vacio";
+            return view('pages.create',['vacio'=>$vacio]);
+        }
     }
+    
 
     public function deleteData($id){
         $tarea = Task::find($id);
@@ -31,8 +38,19 @@ class taskController extends Controller
     }
 
 
+    public function searchData(){
+
+      return view("pages.search");
+
+    }
 
 
+    public function searchData2(Request $request){
 
+        $textoBuscado =  $request['busqueda'];
+        $tasks= Task::where('name','like', '%'.$textoBuscado. "%")->get();
+        return view('pages.search',['tasks'=>$tasks]);
+
+    }
 }
 
