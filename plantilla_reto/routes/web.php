@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use  \App\Http\Controllers\InvokableController;
-
+use App\Http\Controllers\ActivitiesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,8 +13,18 @@ use  \App\Http\Controllers\InvokableController;
 |
 */
 
+Route::get('/', [ActivitiesController::class,'showInicio'])->name('showIndex');
 
-Route::get('/index', InvokableController::class);
+Route::get('/addActivitie', [ActivitiesController::class,'showAddActivitie'])->name('showAddActivitie');
+
+Route::post('/addActivitie2', [ActivitiesController::class,'AddActivitie'])->name('addActivitie');
+
+Route::post('/searchResults', [ActivitiesController::class,'searchActivitie'])->name('showResults');
+
+Route::get('/ActivitiesManager', [ActivitiesController::class,'showActivitiesManager'])->name('showActivitiesManager');
+
+Route::get('/showActivitiesManagerSearch', [ActivitiesController::class,'showActivitiesManagerSearch'])->name('showActivitiesManagerSearch');
 
 
 
+Route::delete('/deleteActivitie/{id}', [ActivitiesController::class,'deleteActivitie'])->name('deleteActivitie');

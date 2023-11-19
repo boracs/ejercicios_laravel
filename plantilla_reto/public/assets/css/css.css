@@ -1,6 +1,8 @@
-*{
-    box-sizing: border-box;
-}
+
+
+
+
+
 
 
 
@@ -9,22 +11,31 @@
 }
 
 
+.img_logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    }
+
 
 #contenedor_titulo{
-    z-index: 1000;
-    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.95),rgba(82, 71, 71, 0.219),rgb(9, 8, 8)),url(../imagenes/carousel-1.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.95),rgba(82, 71, 71, 0.219),rgb(9, 8, 8)),url(../images/img_titulo.jpg);
     background-size: cover;
     height: 400px;
 }
 
 #titulo{
-    font-size: 10rem;
+    font-size: 7rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+
+
+
+
 
 /* carteles */
 
@@ -38,8 +49,8 @@
 }
 
 .cont_cartel{
-    box-shadow: 4px 4px 4px rgb(76, 124, 76);
-    margin: 8px;
+    box-shadow: 4px 4px 4px rgb(37, 40, 37);
+    margin: 25px;
     border: 1px solid black;
     border-radius: 10px;
     width: 300px;
@@ -50,7 +61,7 @@
     flex-direction: column;
 }
 
-.cont_cartel img{
+.cont_cartel .img_principal_cartel{
     padding:5px;
     width: 100%;
     height: 100%;
@@ -71,8 +82,45 @@
 .boton_cartel{
     margin: auto;
 }
+
+
 .cont_descripcion_cartel{
     overflow: hidden;
+    height: 250px;
+}
+
+
+.img_cartel_valoracion{
+    width: 150px;
+    height: 30px;
+}
+.cont_precios_valoraciones strong{
+    color: rgb(23, 121, 248);
+}
+
+.cont_precios_valoraciones{
+    padding: 30px;
+    width: 95%;
+    height: 20px;
+   
+}
+
+/*----of canvas-----*/
+
+
+
+.img_comentario_offcanvas{
+    width: 100px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+
+.formulario_canvas{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 7px;
+    margin-top: 15px;
 }
 
 
@@ -82,15 +130,14 @@
 #contenedor_titulo_form{
     padding: 20px;
     margin-top: 100px;
-   padding-bottom: 100px;
+    padding-bottom: 100px;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items:center;
     justify-content: center;
-    background-image:linear-gradient(rgba(10, 9, 9, 0.861),rgba(3, 2, 2, 0.132),rgb(0, 0, 0)),url(../imagenes/carousel-1.jpg);
+    background-image:linear-gradient(rgba(10, 9, 9, 0.861),rgba(3, 2, 2, 0.132),rgb(0, 0, 0)),url(../images/img_titulo.jpg);
     background-size: cover;
-
 }
 
 #contenedor_titulo_form h3{
@@ -102,6 +149,7 @@
 
 #subcontenedor_titulo_form{
     width: 25%;
+    min-width: 300px;
 }
 
 #contenedor_titulo_form .form-label{
@@ -111,17 +159,16 @@
 
 #contenedor_titulo_form .form-control {
     color: white;
-    background-color: rgba(78, 78, 78, 0.719);
+    background-color: rgba(155, 154, 154, 0.719);
 }
 #formulario{
     border-radius: 15px;
     padding: 30px;
-    background-color: rgba(44, 44, 44, 0.753);
+    background-color: rgba(61, 61, 61, 0.753);
 }
+
+
 /*  footer */
-
-
-
 footer{
     width: 100%;
     background-color: black;
@@ -150,21 +197,51 @@ a:hover, a:focus {
 
 .form-control {
   color: white;
-  background: #030303;
+  background: #d3d3d3;
   border-color: #f9f6f6;
 }
 
 .form-control:focus {
-  background: #3b3b3b;
+  background: rgb(128, 128, 128);
+  color: white;
 }
 
+/* Cuidado el orden de las media querys importa Y MUICHO*/
+@media (max-width: 900px) {
+ 
+    #titulo{
+        font-size: 4rem;
+    }
+
+
+    #contenedor_titulo{
+     
+        height: 230px;
+    }
+
+    #contenedor_carteles{
+        margin-top: 30px;
+        padding: 10px 20px;
+    }
+  }
 
 
 
+  /*PAGIN FORULARIO DE AÑADIR ACTIVIADES*/
 
+.contenedor_formulario{
+    width: 500px;
+    border-radius: 10px;
+}
 
-
-
+.form_crear_act_alerta{
+    height: 80px;
+    background-color: rgb(36, 149, 254);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
 
 
 
