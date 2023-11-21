@@ -79,16 +79,15 @@ class ActivitiesController extends Controller
         return view('pages.editActivitie',['activitie'=>$activitie]);
     }
     
-    public function ditActivitie(Request $request, $id){
+    public function edditActivitie(Request $request, $id){
         $activitie = Activitie::findOrFail($id);
-        $activitie->nombre = $resquest['nombre'];
-        $activitie->lugar = $resquest['lugar'];
-        $activitie->precio = $resquest['precio'];
-        $activitie->imagen = $resquest['imagen'];
-        $activitie->descripcion = $resquest['descripcion'];
+        $activitie->nombre = $request['nombre'];
+        $activitie->lugar = $request['lugar'];
+        $activitie->precio = $request['precio'];
+        $activitie->imagen = $request['imagen'];
+        $activitie->descripcion = $request['descripcion'];
 
         $activitie->save();
-
 
         return redirect()->route('showActivitiesManager')->with('mensajeDeEdicionExito', 'Editado con exito');
     }

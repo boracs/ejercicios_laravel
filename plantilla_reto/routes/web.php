@@ -34,5 +34,5 @@ Route::delete('/deleteActivitie/{id}', [ActivitiesController::class,'deleteActiv
 
 //editactivity
 Route::get('/showEditActivitie/{id}', [ActivitiesController::class,'showEditActivitie'])->name('showEditActivitie');
-Route::put('/editActivitie/{id}', [ActivitiesController::class,'editActivitie'])->name('editActivitie');
+Route::put('/edditActivitie/{id}', [ActivitiesController::class,'edditActivitie'])->name('edditActivitie');
 

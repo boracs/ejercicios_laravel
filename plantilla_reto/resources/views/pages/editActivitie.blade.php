@@ -9,7 +9,7 @@
 <div class="text-light container contenedor_formulario bg-dark p-5 mt-5 mb-5">
         
         <h3>AÑADIR NUEVA ATIVIDAD</h3>
-        <form action="{{ route('addActivitie',['id'=>$activitie['id']]) }}" method ="post">
+        <form action="{{ route('edditActivitie',['id'=>$activitie['id']]) }}" method ="post">
           @CSRF
           @method('PUT')
             <div class="mb-3">
@@ -30,7 +30,7 @@
             </div>
             <div class="mb-3">
             <label for="exampleFormControlTextarea1"  class="sform-label"> Descripcion</label>
-            <textarea name="descripcion" placeholder="{{ $activitie->descripcion }}" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea name="descripcion" value="{{ $activitie->descripcion }}" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">
               Añadir Cambios
