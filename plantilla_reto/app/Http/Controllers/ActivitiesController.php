@@ -55,24 +55,16 @@ class ActivitiesController extends Controller
     }
 
 
-
-
-
     public function showActivitiesManager(){
-    
         $activities = Activitie::all();
         return view('pages.activitiesManager')->with('activities',$activities);
     }
-
-
 
     public function showActivitiesManagerSearch(Request $request){
         $texto_de_busqueda = $request['search'];
         $activities = Activitie::where('nombre','like','%'.$texto_de_busqueda.'%')->get();
         return view('pages.activitiesManager')->with('activities',$activities);
     }
-
-
 
 
     public function deleteActivitie(Request $request, $id){
@@ -82,11 +74,24 @@ class ActivitiesController extends Controller
     }
     
 
-
-
-    public function editActivitie(Request $request, $id){
-        $activitie = Acticvitie::findOrFail($id);
-        return view('pages.editActivitie',['activitie',$activitie]);
+    public function showEditActivitie(Request $request, $id){
+        $activitie = Activitie::findOrFail($id);
+        return view('pages.editActivitie',['activitie'=>$activitie]);
     }
     
+    public function ditActivitie(Request $request, $id){
+        $activitie = Activitie::findOrFail($id);
+        $activitie->nombre = $resquest['nombre'];
+        $activitie->lugar = $resquest['lugar'];
+        $activitie->precio = $resquest['precio'];
+        $activitie->imagen = $resquest['imagen'];
+        $activitie->descripcion = $resquest['descripcion'];
+
+        $activitie->save();
+
+
+        return redirect()->route('showActivitiesManager')->with('mensajeDeEdicionExito', 'Editado con exito');
+    }
+
+
 }

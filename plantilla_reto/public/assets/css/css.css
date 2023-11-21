@@ -159,7 +159,7 @@
 
 #contenedor_titulo_form .form-control {
     color: white;
-    background-color: rgba(155, 154, 154, 0.719);
+    background-color: rgba(58, 58, 58, 0.719);
 }
 #formulario{
     border-radius: 15px;
@@ -197,12 +197,12 @@ a:hover, a:focus {
 
 .form-control {
   color: white;
-  background: #d3d3d3;
+  background: #656464;
   border-color: #f9f6f6;
 }
 
 .form-control:focus {
-  background: rgb(128, 128, 128);
+  background: rgb(47, 47, 47);
   color: white;
 }
 

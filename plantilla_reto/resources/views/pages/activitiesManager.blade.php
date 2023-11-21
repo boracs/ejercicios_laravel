@@ -14,6 +14,13 @@
     </form>
     </div>
 
+   @if(isset($mensajeDeEdicionExito))
+   <div class="d-flex justify-content-center">
+        <p>Actividad editada correctamente</p>
+   </div>
+
+    @endif
+
     <div id="contenedor_carteles">
     @foreach($activities as $activitie)
           @include('partials.activitieAdmin',['activitie'=> $activitie])

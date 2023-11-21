@@ -12,20 +12,27 @@ use App\Http\Controllers\ActivitiesController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+//homepage
 Route::get('/', [ActivitiesController::class,'showInicio'])->name('showIndex');
 
-Route::get('/addActivitie', [ActivitiesController::class,'showAddActivitie'])->name('showAddActivitie');
 
+//add activity
+Route::get('/addActivitie', [ActivitiesController::class,'showAddActivitie'])->name('showAddActivitie');
 Route::post('/addActivitie2', [ActivitiesController::class,'AddActivitie'])->name('addActivitie');
+
 
 Route::post('/searchResults', [ActivitiesController::class,'searchActivitie'])->name('showResults');
 
-Route::get('/ActivitiesManager', [ActivitiesController::class,'showActivitiesManager'])->name('showActivitiesManager');
 
+//actv manager
+Route::get('/ActivitiesManager', [ActivitiesController::class,'showActivitiesManager'])->name('showActivitiesManager');
 Route::get('/showActivitiesManagerSearch', [ActivitiesController::class,'showActivitiesManagerSearch'])->name('showActivitiesManagerSearch');
 
+
+//delete activity
 Route::delete('/deleteActivitie/{id}', [ActivitiesController::class,'deleteActivitie'])->name('deleteActivitie');
 
-Route::get('/editActivitie/{id}', [ActivitiesController::class,'editActivitie'])->name('editActivitie');
+//editactivity
+Route::get('/showEditActivitie/{id}', [ActivitiesController::class,'showEditActivitie'])->name('showEditActivitie');
+Route::put('/editActivitie/{id}', [ActivitiesController::class,'editActivitie'])->name('editActivitie');
 
