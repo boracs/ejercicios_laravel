@@ -25,6 +25,7 @@ Route::get('/ActivitiesManager', [ActivitiesController::class,'showActivitiesMan
 
 Route::get('/showActivitiesManagerSearch', [ActivitiesController::class,'showActivitiesManagerSearch'])->name('showActivitiesManagerSearch');
 
-
-
 Route::delete('/deleteActivitie/{id}', [ActivitiesController::class,'deleteActivitie'])->name('deleteActivitie');
+
+Route::get('/editActivitie/{id}', [ActivitiesController::class,'editActivitie'])->name('editActivitie');
+

@@ -99,7 +99,8 @@
 
 
 
-@yield('content')
+@section('content')
+@show
 
 
 

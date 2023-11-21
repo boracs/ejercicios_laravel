@@ -58,7 +58,7 @@ class ActivitiesController extends Controller
 
 
 
-    public function showActivitiesManager(Request $request){
+    public function showActivitiesManager(){
     
         $activities = Activitie::all();
         return view('pages.activitiesManager')->with('activities',$activities);
@@ -68,7 +68,7 @@ class ActivitiesController extends Controller
 
     public function showActivitiesManagerSearch(Request $request){
         $texto_de_busqueda = $request['search'];
-        $activities = Activitie::where('name','like','%'.$texto_de_busqueda.'%');
+        $activities = Activitie::where('nombre','like','%'.$texto_de_busqueda.'%')->get();
         return view('pages.activitiesManager')->with('activities',$activities);
     }
 
