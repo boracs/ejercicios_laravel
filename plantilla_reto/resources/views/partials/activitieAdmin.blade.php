@@ -17,7 +17,7 @@
                 <button class=" boton_cartel btn btn-success btn_cartel" type="submit">Eliminar </button>
              </form>
 
-             <form action="" method="POST">
+             <form action="{{ route ('edirtActivitie',['id'=>$activitie['id']]) }}" method="get">
                 @csrf
                 <button class=" boton_cartel btn btn-success btn_cartel" type="submit">Editar </button>
              </form>

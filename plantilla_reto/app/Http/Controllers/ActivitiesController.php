@@ -76,7 +76,7 @@ class ActivitiesController extends Controller
 
 
     public function deleteActivitie(Request $request, $id){
-        $activitie = Activitie::find($id);
+        $activitie = Activitie::findOrFail($id);
         $activitie->delete();
         return redirect()->route('showActivitiesManager');
     }
@@ -84,10 +84,9 @@ class ActivitiesController extends Controller
 
 
 
-    public function searchResults(Request $request){
-        
-
+    public function editActivitie(Request $request, $id){
+        $activitie = Acticvitie::findOrFail($id);
+        return view('pages.editActivitie',['activitie',$activitie]);
     }
-
-
+    
 }
