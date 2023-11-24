@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(255, 211, 211);
+}
+#divform {
+    border:3px solid rgb(77, 177, 240);
+    border-radius: 20px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}

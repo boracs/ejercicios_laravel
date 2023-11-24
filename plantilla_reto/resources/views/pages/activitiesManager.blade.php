@@ -14,11 +14,11 @@
     </form>
     </div>
 
-   @if(isset($mensajeDeEdicionExito))
-   <div class="d-flex justify-content-center">
-        <p>Actividad editada correctamente</p>
-   </div>
-
+    
+    @if(session('mensajeDeEdicionExito'))
+    <div id="mensaje_exito" class="m-auto d-flex justify-content-center align-items-center">
+        <p>{{ session('mensajeDeEdicionExito') }}</p>
+     </div> 
     @endif
 
     <div id="contenedor_carteles">

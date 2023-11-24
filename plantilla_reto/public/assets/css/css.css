@@ -243,7 +243,13 @@ a:hover, a:focus {
    justify-content: center;
 }
 
+/* vista activitiesManager*/
 
-
+#mensaje_exito{
+    background-color: rgb(210, 250, 191);
+    border: 10px;
+    width: 400px;
+    height: 200px;
+}
 
 
