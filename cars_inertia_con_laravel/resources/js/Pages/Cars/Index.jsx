@@ -37,6 +37,21 @@ export default function Dashboard({ auth }) {
                             <th classNam="px-2 py-2"></th>
                         </tr>
                     </thead>
+                    <tbody>
+                        {props.cars.map((car,i)=>(
+                            <tr key={car.id}>
+                            <td className="border border-gray-400 px-2 py-2">{(i+1)}</td>
+                            <td className="border border-gray-400 px-2 py-2">{car.make}</td>
+                            <td className="border border-gray-400 px-2 py-2">{car.model}</td>
+                            <td className="border border-gray-400 px-2 py-2">
+                                <i className={"fa-solid fa-car text-"+car.color+"-600"}> </i>
+                            </td>
+                            <td className="border border-gray-400 px-2 py-2"></td>
+                            <td className="border border-gray-400 px-2 py-2"></td>
+
+                            </tr>
+                        ))}
+                    </tbody>
                 </table>
             </div>
         </AuthenticatedLayout>
