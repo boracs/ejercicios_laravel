@@ -30,7 +30,7 @@
             </div>
             <div class="mb-3">
             <label for="exampleFormControlTextarea1"  class="sform-label"> Descripcion</label>
-            <textarea name="descripcion" value="{{ $activitie->descripcion }}" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea name="descripcion" class="form-control" id="exampleFormControlTextarea1" rows="3">{{ $activitie->descripcion }}</textarea>
             </div>
             <button type="submit" class="btn btn-primary">
               Añadir Cambios
